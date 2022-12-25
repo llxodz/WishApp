@@ -13,18 +13,29 @@
 		3354A3022958B236000A6136 /* XCAssets+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354A2FD2958B236000A6136 /* XCAssets+Generated.swift */; };
 		3354A3032958B236000A6136 /* IB-Scenes+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354A2FE2958B236000A6136 /* IB-Scenes+Generated.swift */; };
 		3354A3042958B236000A6136 /* Fonts+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354A2FF2958B236000A6136 /* Fonts+Generated.swift */; };
+		3354A3092958B9B4000A6136 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3354A3052958B9B4000A6136 /* Montserrat-Bold.ttf */; };
+		3354A30A2958B9B4000A6136 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3354A3062958B9B4000A6136 /* Montserrat-Regular.ttf */; };
+		3354A30B2958B9B4000A6136 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3354A3072958B9B4000A6136 /* Montserrat-Medium.ttf */; };
+		3354A30C2958B9B4000A6136 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3354A3082958B9B4000A6136 /* Montserrat-SemiBold.ttf */; };
+		3354A3112958BF3A000A6136 /* HeaderWishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354A3102958BF3A000A6136 /* HeaderWishListView.swift */; };
+		3354A3142958BFF5000A6136 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354A3132958BFF5000A6136 /* UIView+Extensions.swift */; };
+		3354A3232958C658000A6136 /* WishButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354A3222958C658000A6136 /* WishButtonView.swift */; };
 		3365A6332958A8E300332EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A6322958A8E300332EB9 /* AppDelegate.swift */; };
 		3365A6352958A8E300332EB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A6342958A8E300332EB9 /* SceneDelegate.swift */; };
-		3365A6372958A8E300332EB9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A6362958A8E300332EB9 /* MainViewController.swift */; };
+		3365A6372958A8E300332EB9 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A6362958A8E300332EB9 /* WishListViewController.swift */; };
 		3365A63D2958A8E300332EB9 /* WishApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3365A63B2958A8E300332EB9 /* WishApp.xcdatamodeld */; };
 		3365A63F2958A8E400332EB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3365A63E2958A8E400332EB9 /* Assets.xcassets */; };
 		3365A6422958A8E400332EB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3365A6402958A8E400332EB9 /* LaunchScreen.storyboard */; };
 		3365A64D2958A8E400332EB9 /* WishAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A64C2958A8E400332EB9 /* WishAppTests.swift */; };
 		3365A6572958A8E400332EB9 /* WishAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A6562958A8E400332EB9 /* WishAppUITests.swift */; };
 		3365A6592958A8E400332EB9 /* WishAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A6582958A8E400332EB9 /* WishAppUITestsLaunchTests.swift */; };
-		3365A6712958B08F00332EB9 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3365A6752958B08F00332EB9 /* en.strings */; };
-		3365A6722958B08F00332EB9 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3365A6752958B08F00332EB9 /* en.strings */; };
-		3365A6732958B08F00332EB9 /* en.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3365A6752958B08F00332EB9 /* en.strings */; };
+		3365A6712958B08F00332EB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3365A6752958B08F00332EB9 /* Localizable.strings */; };
+		3365A6722958B08F00332EB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3365A6752958B08F00332EB9 /* Localizable.strings */; };
+		3365A6732958B08F00332EB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3365A6752958B08F00332EB9 /* Localizable.strings */; };
+		338DB13D2958CC7E00643365 /* BaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB13C2958CC7E00643365 /* BaseConstants.swift */; };
+		338DB1422958D0D500643365 /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB1412958D0D500643365 /* WishTableViewCell.swift */; };
+		338DB1432958D0D500643365 /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB1412958D0D500643365 /* WishTableViewCell.swift */; };
+		338DB1442958D0D500643365 /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB1412958D0D500643365 /* WishTableViewCell.swift */; };
 		49854330F3C7FF97DF72C59D /* Pods_WishApp_WishAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7DF3E14B7EC6F02AAAEF39 /* Pods_WishApp_WishAppUITests.framework */; };
 		8BD3BCC7110ADFCA068DD405 /* Pods_WishApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEA2CE70082FA08466661CC /* Pods_WishApp.framework */; };
 /* End PBXBuildFile section */
@@ -52,10 +63,19 @@
 		3354A2FD2958B236000A6136 /* XCAssets+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCAssets+Generated.swift"; sourceTree = "<group>"; };
 		3354A2FE2958B236000A6136 /* IB-Scenes+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IB-Scenes+Generated.swift"; sourceTree = "<group>"; };
 		3354A2FF2958B236000A6136 /* Fonts+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Fonts+Generated.swift"; sourceTree = "<group>"; };
+		3354A3052958B9B4000A6136 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		3354A3062958B9B4000A6136 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		3354A3072958B9B4000A6136 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		3354A3082958B9B4000A6136 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		3354A3102958BF3A000A6136 /* HeaderWishListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderWishListView.swift; sourceTree = "<group>"; };
+		3354A3132958BFF5000A6136 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		3354A31A2958C17B000A6136 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		3354A31B2958C17B000A6136 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3354A3222958C658000A6136 /* WishButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishButtonView.swift; sourceTree = "<group>"; };
 		3365A62F2958A8E300332EB9 /* WishApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WishApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3365A6322958A8E300332EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3365A6342958A8E300332EB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3365A6362958A8E300332EB9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3365A6362958A8E300332EB9 /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		3365A63C2958A8E300332EB9 /* WishApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WishApp.xcdatamodel; sourceTree = "<group>"; };
 		3365A63E2958A8E400332EB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3365A6412958A8E400332EB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,7 +85,9 @@
 		3365A6522958A8E400332EB9 /* WishAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WishAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3365A6562958A8E400332EB9 /* WishAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishAppUITests.swift; sourceTree = "<group>"; };
 		3365A6582958A8E400332EB9 /* WishAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		3365A6742958B08F00332EB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/en.strings; sourceTree = "<group>"; };
+		3365A6742958B08F00332EB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		338DB13C2958CC7E00643365 /* BaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstants.swift; sourceTree = "<group>"; };
+		338DB1412958D0D500643365 /* WishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishTableViewCell.swift; sourceTree = "<group>"; };
 		40FDEC16AD6F99A188BA7A6B /* Pods-WishAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishAppTests.release.xcconfig"; path = "Target Support Files/Pods-WishAppTests/Pods-WishAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C40CE007FCBEEBA5EC1B53A /* Pods-WishAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WishAppTests/Pods-WishAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0942C2AC4902A3C4164CAF8 /* Pods-WishApp-WishAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishApp-WishAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WishApp-WishAppUITests/Pods-WishApp-WishAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +150,48 @@
 			path = WishApp/Resources/Generated;
 			sourceTree = SOURCE_ROOT;
 		};
+		3354A30D2958BF11000A6136 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3365A6362958A8E300332EB9 /* WishListViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3354A30E2958BF1A000A6136 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				338DB1402958D0CB00643365 /* WishTableViewCell */,
+				3354A3212958C646000A6136 /* WishButtonView */,
+				3354A30F2958BF23000A6136 /* HeaderWishListView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3354A30F2958BF23000A6136 /* HeaderWishListView */ = {
+			isa = PBXGroup;
+			children = (
+				3354A3102958BF3A000A6136 /* HeaderWishListView.swift */,
+			);
+			path = HeaderWishListView;
+			sourceTree = "<group>";
+		};
+		3354A3122958BFD7000A6136 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3354A3132958BFF5000A6136 /* UIView+Extensions.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		3354A3212958C646000A6136 /* WishButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				3354A3222958C658000A6136 /* WishButtonView.swift */,
+			);
+			path = WishButtonView;
+			sourceTree = "<group>";
+		};
 		3365A6262958A8E300332EB9 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +219,7 @@
 			children = (
 				3365A6672958AAA100332EB9 /* Core */,
 				3365A6662958AA9900332EB9 /* Resources */,
+				3354A3122958BFD7000A6136 /* Helper */,
 				3365A6652958AA9300332EB9 /* Screens */,
 				3365A6322958A8E300332EB9 /* AppDelegate.swift */,
 				3365A6342958A8E300332EB9 /* SceneDelegate.swift */,
@@ -204,6 +269,7 @@
 		3365A6672958AAA100332EB9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				338DB13C2958CC7E00643365 /* BaseConstants.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -211,7 +277,8 @@
 		3365A6682958AAA700332EB9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				3365A6362958A8E300332EB9 /* MainViewController.swift */,
+				3354A30D2958BF11000A6136 /* ViewController */,
+				3354A30E2958BF1A000A6136 /* Views */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -219,6 +286,10 @@
 		3365A66B2958AFC300332EB9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				3354A3052958B9B4000A6136 /* Montserrat-Bold.ttf */,
+				3354A3072958B9B4000A6136 /* Montserrat-Medium.ttf */,
+				3354A3062958B9B4000A6136 /* Montserrat-Regular.ttf */,
+				3354A3082958B9B4000A6136 /* Montserrat-SemiBold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -226,9 +297,17 @@
 		3365A66C2958AFC800332EB9 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				3365A6752958B08F00332EB9 /* en.strings */,
+				3365A6752958B08F00332EB9 /* Localizable.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		338DB1402958D0CB00643365 /* WishTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				338DB1412958D0D500643365 /* WishTableViewCell.swift */,
+			);
+			path = WishTableViewCell;
 			sourceTree = "<group>";
 		};
 		CF9B971A2265294C8459CA48 /* Pods */ = {
@@ -336,6 +415,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = 3365A6262958A8E300332EB9;
 			productRefGroup = 3365A6302958A8E300332EB9 /* Products */;
@@ -354,8 +434,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3354A3092958B9B4000A6136 /* Montserrat-Bold.ttf in Resources */,
 				3365A6422958A8E400332EB9 /* LaunchScreen.storyboard in Resources */,
-				3365A6712958B08F00332EB9 /* en.strings in Resources */,
+				3365A6712958B08F00332EB9 /* Localizable.strings in Resources */,
+				3354A30C2958B9B4000A6136 /* Montserrat-SemiBold.ttf in Resources */,
+				3354A30A2958B9B4000A6136 /* Montserrat-Regular.ttf in Resources */,
+				3354A30B2958B9B4000A6136 /* Montserrat-Medium.ttf in Resources */,
 				3365A63F2958A8E400332EB9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +448,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3365A6722958B08F00332EB9 /* en.strings in Resources */,
+				3365A6722958B08F00332EB9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +456,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3365A6732958B08F00332EB9 /* en.strings in Resources */,
+				3365A6732958B08F00332EB9 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,11 +593,16 @@
 				3354A3002958B236000A6136 /* IB-Segues+Generated.swift in Sources */,
 				3365A63D2958A8E300332EB9 /* WishApp.xcdatamodeld in Sources */,
 				3354A3012958B236000A6136 /* Strings+Generated.swift in Sources */,
-				3365A6372958A8E300332EB9 /* MainViewController.swift in Sources */,
+				3365A6372958A8E300332EB9 /* WishListViewController.swift in Sources */,
 				3365A6332958A8E300332EB9 /* AppDelegate.swift in Sources */,
 				3354A3022958B236000A6136 /* XCAssets+Generated.swift in Sources */,
 				3365A6352958A8E300332EB9 /* SceneDelegate.swift in Sources */,
+				338DB13D2958CC7E00643365 /* BaseConstants.swift in Sources */,
+				3354A3112958BF3A000A6136 /* HeaderWishListView.swift in Sources */,
+				3354A3232958C658000A6136 /* WishButtonView.swift in Sources */,
 				3354A3032958B236000A6136 /* IB-Scenes+Generated.swift in Sources */,
+				338DB1422958D0D500643365 /* WishTableViewCell.swift in Sources */,
+				3354A3142958BFF5000A6136 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338DB1432958D0D500643365 /* WishTableViewCell.swift in Sources */,
 				3365A64D2958A8E400332EB9 /* WishAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,6 +619,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338DB1442958D0D500643365 /* WishTableViewCell.swift in Sources */,
 				3365A6572958A8E400332EB9 /* WishAppUITests.swift in Sources */,
 				3365A6592958A8E400332EB9 /* WishAppUITestsLaunchTests.swift in Sources */,
 			);
@@ -554,16 +645,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				3365A6412958A8E400332EB9 /* Base */,
+				3354A31A2958C17B000A6136 /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		3365A6752958B08F00332EB9 /* en.strings */ = {
+		3365A6752958B08F00332EB9 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3365A6742958B08F00332EB9 /* en */,
+				3354A31B2958C17B000A6136 /* ru */,
 			);
-			name = en.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -573,6 +666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -633,6 +727,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

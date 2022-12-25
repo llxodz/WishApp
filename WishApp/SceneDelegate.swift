@@ -15,7 +15,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         
-        let vc = MainViewController()
+        let vc = WishListViewController()
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
     }
