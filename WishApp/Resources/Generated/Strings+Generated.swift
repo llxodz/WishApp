@@ -14,7 +14,7 @@ internal enum L10n {
   ///   WishApp
   /// 
   ///   Created by Ilya Gavrilov on 25.12.2022.
-  internal static let hello = L10n.tr("en", "Hello", fallback: "Hello")
+  internal static let wishList = L10n.tr("Localizable", "WishList", fallback: "Wish List")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces
