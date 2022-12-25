@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 private enum Constants {
     static let titleFont = FontFamily.Montserrat.bold.font(size: 20)

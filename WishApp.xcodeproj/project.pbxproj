@@ -19,6 +19,7 @@
 		3354A30C2958B9B4000A6136 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3354A3082958B9B4000A6136 /* Montserrat-SemiBold.ttf */; };
 		3354A3112958BF3A000A6136 /* HeaderWishListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354A3102958BF3A000A6136 /* HeaderWishListView.swift */; };
 		3354A3142958BFF5000A6136 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354A3132958BFF5000A6136 /* UIView+Extensions.swift */; };
+		3354A3232958C658000A6136 /* WishButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3354A3222958C658000A6136 /* WishButtonView.swift */; };
 		3365A6332958A8E300332EB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A6322958A8E300332EB9 /* AppDelegate.swift */; };
 		3365A6352958A8E300332EB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A6342958A8E300332EB9 /* SceneDelegate.swift */; };
 		3365A6372958A8E300332EB9 /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3365A6362958A8E300332EB9 /* WishListViewController.swift */; };
@@ -31,6 +32,7 @@
 		3365A6712958B08F00332EB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3365A6752958B08F00332EB9 /* Localizable.strings */; };
 		3365A6722958B08F00332EB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3365A6752958B08F00332EB9 /* Localizable.strings */; };
 		3365A6732958B08F00332EB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3365A6752958B08F00332EB9 /* Localizable.strings */; };
+		338DB13D2958CC7E00643365 /* BaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB13C2958CC7E00643365 /* BaseConstants.swift */; };
 		49854330F3C7FF97DF72C59D /* Pods_WishApp_WishAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7DF3E14B7EC6F02AAAEF39 /* Pods_WishApp_WishAppUITests.framework */; };
 		8BD3BCC7110ADFCA068DD405 /* Pods_WishApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEA2CE70082FA08466661CC /* Pods_WishApp.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +68,7 @@
 		3354A3132958BFF5000A6136 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		3354A31A2958C17B000A6136 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		3354A31B2958C17B000A6136 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3354A3222958C658000A6136 /* WishButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishButtonView.swift; sourceTree = "<group>"; };
 		3365A62F2958A8E300332EB9 /* WishApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WishApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3365A6322958A8E300332EB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3365A6342958A8E300332EB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 		3365A6562958A8E400332EB9 /* WishAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishAppUITests.swift; sourceTree = "<group>"; };
 		3365A6582958A8E400332EB9 /* WishAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3365A6742958B08F00332EB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		338DB13C2958CC7E00643365 /* BaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstants.swift; sourceTree = "<group>"; };
 		40FDEC16AD6F99A188BA7A6B /* Pods-WishAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishAppTests.release.xcconfig"; path = "Target Support Files/Pods-WishAppTests/Pods-WishAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C40CE007FCBEEBA5EC1B53A /* Pods-WishAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WishAppTests/Pods-WishAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0942C2AC4902A3C4164CAF8 /* Pods-WishApp-WishAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishApp-WishAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WishApp-WishAppUITests/Pods-WishApp-WishAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 		3354A30E2958BF1A000A6136 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3354A3212958C646000A6136 /* WishButtonView */,
 				3354A30F2958BF23000A6136 /* HeaderWishListView */,
 			);
 			path = Views;
@@ -172,6 +177,14 @@
 				3354A3132958BFF5000A6136 /* UIView+Extensions.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		3354A3212958C646000A6136 /* WishButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				3354A3222958C658000A6136 /* WishButtonView.swift */,
+			);
+			path = WishButtonView;
 			sourceTree = "<group>";
 		};
 		3365A6262958A8E300332EB9 = {
@@ -251,6 +264,7 @@
 		3365A6672958AAA100332EB9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				338DB13C2958CC7E00643365 /* BaseConstants.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -570,7 +584,9 @@
 				3365A6332958A8E300332EB9 /* AppDelegate.swift in Sources */,
 				3354A3022958B236000A6136 /* XCAssets+Generated.swift in Sources */,
 				3365A6352958A8E300332EB9 /* SceneDelegate.swift in Sources */,
+				338DB13D2958CC7E00643365 /* BaseConstants.swift in Sources */,
 				3354A3112958BF3A000A6136 /* HeaderWishListView.swift in Sources */,
+				3354A3232958C658000A6136 /* WishButtonView.swift in Sources */,
 				3354A3032958B236000A6136 /* IB-Scenes+Generated.swift in Sources */,
 				3354A3142958BFF5000A6136 /* UIView+Extensions.swift in Sources */,
 			);

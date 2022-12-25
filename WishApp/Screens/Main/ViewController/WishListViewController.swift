@@ -15,6 +15,7 @@ private enum Constants {
 class WishListViewController: UIViewController {
     
     private lazy var headerView = HeaderWishListView()
+    private lazy var addWishButton = WishButtonView()
     
     // MARK: - Lifecycle
     
@@ -28,7 +29,7 @@ class WishListViewController: UIViewController {
     // MARK: - Private
     
     private func addViews() {
-        view.addSubviews(headerView)
+        view.addSubviews(headerView, addWishButton)
     }
     
     private func configureLayout() {
@@ -37,10 +38,21 @@ class WishListViewController: UIViewController {
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(Constants.headerHeight)
         }
+        addWishButton.snp.makeConstraints {
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
+            $0.height.equalTo(Constants.headerHeight)
+            $0.leading.equalToSuperview().inset(CGFloat.baseMargin)
+            $0.trailing.equalToSuperview().inset(CGFloat.baseMargin)
+        }
     }
     
     private func configureAppearance() {
         view.backgroundColor = .white
+        addWishButton.backgroundColor = .clear
+    }
+    
+    @objc func addWishButtonTapped() {
+        print(#function)
     }
 }
 
