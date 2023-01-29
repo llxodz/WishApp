@@ -18,6 +18,8 @@ class WishListViewController: UIViewController {
     private lazy var wishListTableView = UITableView()
     private lazy var addWishButton = WishButtonView()
     
+    var viewModel: WishListViewModel?
+    
     // MARK: - Lifecycle
     
     override func loadView() {
@@ -25,7 +27,13 @@ class WishListViewController: UIViewController {
         addViews()
         configureLayout()
         configureAppearance()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         configureTableView()
+        wishListTableView.rowHeight = UITableView.automaticDimension
+        viewModel = WishListViewModel()
     }
     
     // MARK: - Private
@@ -64,10 +72,10 @@ class WishListViewController: UIViewController {
         wishListTableView.dataSource = self
         wishListTableView.delaysContentTouches = false
         wishListTableView.register(WishTableViewCell.self, forCellReuseIdentifier: WishTableViewCell.identifier)
-        wishListTableView.rowHeight = UITableView.automaticDimension
         wishListTableView.separatorStyle = .none
         wishListTableView.showsVerticalScrollIndicator = false
-        wishListTableView.estimatedRowHeight = 84
+        wishListTableView.rowHeight = UITableView.automaticDimension
+        wishListTableView.estimatedRowHeight = 32
     }
     
     @objc func addWishButtonTapped() {
@@ -80,14 +88,16 @@ class WishListViewController: UIViewController {
 extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return viewModel?.getWishList().count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: WishTableViewCell.identifier,
             for: indexPath
-        ) as? WishTableViewCell else { return UITableViewCell() }
+        ) as? WishTableViewCell, let viewModel = viewModel else { return UITableViewCell() }
+        
+        cell.configure(with: (viewModel.getWishList()[indexPath.row]))
         
         return cell
     }
