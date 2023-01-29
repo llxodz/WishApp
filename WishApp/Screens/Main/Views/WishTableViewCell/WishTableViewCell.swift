@@ -11,6 +11,9 @@ import SnapKit
 private enum Constants {
     static let titleLabelFont = FontFamily.Montserrat.bold.font(size: 16)
     static let descriptionLabelFont = FontFamily.Montserrat.medium.font(size: 12)
+    
+    static let imageLink: UIImage = Asset.linkImage.image
+    static let imageLinkSize: CGFloat = 18
 }
 
 final class WishTableViewCell: UITableViewCell {
@@ -19,35 +22,26 @@ final class WishTableViewCell: UITableViewCell {
     public static var identifier: String {
         String(describing: self)
     }
-    override public var frame: CGRect {
-        get {
-            return super.frame
-        }
-        set {
-            var frame =  newValue
-            frame.size.height -= 8
-            super.frame = frame
-        }
-    }
+    
+    // Private property
+    private var model: Wish?
+    private var heightDescription: CGFloat = 10
     
     // UI
-    private lazy var stackView = UIStackView()
     private lazy var titleWishLabel: UILabel = {
         let label = UILabel()
-        label.text = "sdsddddd hshjashdjsahasjahdasdhkhsd hjsdajshdjashdjasdhsjhdjshjahdjahsdjashsjdja shdjadjshdjasdsjdad"
-        label.numberOfLines = 2
+        label.numberOfLines = 0
         label.textColor = .black
         label.font = Constants.titleLabelFont
         return label
     }()
     private lazy var linkImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = Asset.linkImage.image
+        imageView.image = Constants.imageLink
         return imageView
     }()
     private lazy var descriptionWishLabel: UILabel = {
         let label = UILabel()
-        label.text = "sовлфыовлф овлфыо лвфоылв офлв олыофлвфоылвфыофлыовфлывофлыовлфы олвыофлвфоылвфоыв nasjd jshjsdhjahd ja shaj sdhajs dhajs dhasjdhasjdahsjd hasjdh dj hasjd hasjd hasjd jashd jashd jsahd ajs dhsajdhaskdjashdkasjdhkasldjhlasdf  af dsfsdf dfsdf dfsf"
         label.numberOfLines = 0
         label.textColor = .gray
         label.font = Constants.descriptionLabelFont
@@ -70,30 +64,70 @@ final class WishTableViewCell: UITableViewCell {
     // MARK: - Private
     
     private func addViews() {
-        stackView.addArrangedSubview(titleWishLabel)
-        stackView.addArrangedSubview(linkImageView)
-        addSubviews(stackView, descriptionWishLabel)
+        contentView.addSubviews(titleWishLabel, linkImageView, descriptionWishLabel)
     }
     
     private func configureLayout() {
-        stackView.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(8)
-            $0.top.equalToSuperview().offset(8)
+        titleWishLabel.snp.makeConstraints {
+            $0.top.equalTo(self.contentView.snp.top).inset(CGFloat.smallMargin)
+            $0.leading.equalTo(self.contentView.snp.leading).inset(CGFloat.smallMargin)
+            $0.trailing.equalTo(linkImageView.snp.leading)
         }
         linkImageView.snp.makeConstraints {
-            $0.height.width.equalTo(18)
+            $0.height.width.equalTo(Constants.imageLinkSize)
+            $0.leading.equalTo(titleWishLabel.snp.trailing)
+            $0.centerY.equalTo(titleWishLabel.snp.centerY)
+            $0.trailing.equalTo(self.contentView.snp.trailing).inset(CGFloat.smallMargin)
         }
         descriptionWishLabel.snp.makeConstraints {
-            $0.leading.trailing.equalToSuperview().inset(8)
-            $0.top.equalTo(stackView.snp.bottom).offset(8)
-            $0.bottom.equalToSuperview().offset(-8)
+            $0.top.equalTo(titleWishLabel.snp.bottom).offset(CGFloat.smallMargin)
+            $0.leading.trailing.equalToSuperview().inset(CGFloat.smallMargin)
+            $0.bottom.equalTo(self.contentView.snp.bottom).inset(CGFloat.smallMargin)
         }
     }
     
     private func configureAppearance() {
-        layer.cornerRadius = 12    /// радиус закругления закругление
-        layer.borderWidth = 1.0   // толщина обводки
-        layer.borderColor = UIColor.gray.cgColor // цвет обводки
+        layer.cornerRadius = .baseRadius
+        layer.borderWidth = 1.0
+        layer.borderColor = UIColor.gray.cgColor
         clipsToBounds = true
+    }
+    
+    private func updateLayout() {
+        titleWishLabel.snp.removeConstraints()
+        descriptionWishLabel.snp.removeConstraints()
+        linkImageView.snp.removeConstraints()
+        
+        titleWishLabel.snp.makeConstraints {
+            $0.top.equalTo(self.contentView.snp.top).inset(CGFloat.smallMargin)
+            $0.leading.equalTo(self.contentView.snp.leading).inset(CGFloat.smallMargin)
+            $0.trailing.equalTo(linkImageView.snp.leading)
+            $0.bottom.equalTo(self.contentView.snp.bottom).inset(CGFloat.smallMargin)
+        }
+        linkImageView.snp.makeConstraints {
+            $0.height.width.equalTo(Constants.imageLinkSize)
+            $0.leading.equalTo(titleWishLabel.snp.trailing)
+            $0.trailing.equalTo(self.contentView.snp.trailing).inset(CGFloat.smallMargin)
+            $0.centerY.equalTo(titleWishLabel.snp.centerY)
+        }
+    }
+}
+
+// MARK: - Configurable
+
+extension WishTableViewCell: Configurable {
+    
+    typealias Model = Wish
+    
+    func configure(with model: Wish) {
+        self.model = model
+        
+        titleWishLabel.text = model.title
+        if model.description.isEmpty {
+            self.updateLayout()
+        } else {
+            descriptionWishLabel.text = model.description
+        }
+        linkImageView.isHidden = model.link != nil ? false : true
     }
 }
