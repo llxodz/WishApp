@@ -27,12 +27,11 @@ class WishListViewController: UIViewController {
         addViews()
         configureLayout()
         configureAppearance()
+        configureTableView()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
-        wishListTableView.rowHeight = UITableView.automaticDimension
         viewModel = WishListViewModel()
     }
     
