@@ -36,6 +36,11 @@
 		338DB1422958D0D500643365 /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB1412958D0D500643365 /* WishTableViewCell.swift */; };
 		338DB1432958D0D500643365 /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB1412958D0D500643365 /* WishTableViewCell.swift */; };
 		338DB1442958D0D500643365 /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB1412958D0D500643365 /* WishTableViewCell.swift */; };
+		339DE114298856EF00E1F5F5 /* WishObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE113298856EF00E1F5F5 /* WishObject.swift */; };
+		339DE11829885DD900E1F5F5 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE11729885DD900E1F5F5 /* StorageService.swift */; };
+		339DE11A29885E6300E1F5F5 /* Results+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE11929885E6300E1F5F5 /* Results+Extensions.swift */; };
+		339DE12129885F0C00E1F5F5 /* ModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE12029885F0C00E1F5F5 /* ModelRepository.swift */; };
+		339DE12429885FE300E1F5F5 /* WishRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE12329885FE300E1F5F5 /* WishRepository.swift */; };
 		339E837E295A29EB00DE9DF5 /* Configurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E837D295A29EB00DE9DF5 /* Configurable.swift */; };
 		339E8381295A2AAB00DE9DF5 /* WishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E8380295A2AAB00DE9DF5 /* WishListViewModel.swift */; };
 		339E8384295A2AEB00DE9DF5 /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E8383295A2AEB00DE9DF5 /* Wish.swift */; };
@@ -91,6 +96,11 @@
 		3365A6742958B08F00332EB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		338DB13C2958CC7E00643365 /* BaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstants.swift; sourceTree = "<group>"; };
 		338DB1412958D0D500643365 /* WishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishTableViewCell.swift; sourceTree = "<group>"; };
+		339DE113298856EF00E1F5F5 /* WishObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishObject.swift; sourceTree = "<group>"; };
+		339DE11729885DD900E1F5F5 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		339DE11929885E6300E1F5F5 /* Results+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+Extensions.swift"; sourceTree = "<group>"; };
+		339DE12029885F0C00E1F5F5 /* ModelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelRepository.swift; sourceTree = "<group>"; };
+		339DE12329885FE300E1F5F5 /* WishRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishRepository.swift; sourceTree = "<group>"; };
 		339E837D295A29EB00DE9DF5 /* Configurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurable.swift; sourceTree = "<group>"; };
 		339E8380295A2AAB00DE9DF5 /* WishListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewModel.swift; sourceTree = "<group>"; };
 		339E8383295A2AEB00DE9DF5 /* Wish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
@@ -185,7 +195,7 @@
 		3354A3122958BFD7000A6136 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				3354A3132958BFF5000A6136 /* UIView+Extensions.swift */,
+				339DE11B29885EB600E1F5F5 /* Extensions */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -226,6 +236,7 @@
 				3365A6672958AAA100332EB9 /* Core */,
 				3365A6662958AA9900332EB9 /* Resources */,
 				339E8382295A2ADF00DE9DF5 /* Model */,
+				339DE11529885DB400E1F5F5 /* Services */,
 				3354A3122958BFD7000A6136 /* Helper */,
 				3365A6652958AA9300332EB9 /* Screens */,
 				3365A6322958A8E300332EB9 /* AppDelegate.swift */,
@@ -276,6 +287,7 @@
 		3365A6672958AAA100332EB9 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				339DE11E29885EE500E1F5F5 /* Protocols */,
 				338DB13C2958CC7E00643365 /* BaseConstants.swift */,
 				339E837D295A29EB00DE9DF5 /* Configurable.swift */,
 			);
@@ -285,6 +297,7 @@
 		3365A6682958AAA700332EB9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				339DE12229885FD200E1F5F5 /* Repository */,
 				339E837F295A2A9A00DE9DF5 /* ViewModel */,
 				3354A30D2958BF11000A6136 /* ViewController */,
 				3354A30E2958BF1A000A6136 /* Views */,
@@ -319,6 +332,71 @@
 			path = WishTableViewCell;
 			sourceTree = "<group>";
 		};
+		339DE11529885DB400E1F5F5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				339DE11629885DCA00E1F5F5 /* StorageService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		339DE11629885DCA00E1F5F5 /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+				339DE11729885DD900E1F5F5 /* StorageService.swift */,
+			);
+			path = StorageService;
+			sourceTree = "<group>";
+		};
+		339DE11B29885EB600E1F5F5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				339DE11D29885ED300E1F5F5 /* Results */,
+				339DE11C29885EC200E1F5F5 /* UIView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		339DE11C29885EC200E1F5F5 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				3354A3132958BFF5000A6136 /* UIView+Extensions.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		339DE11D29885ED300E1F5F5 /* Results */ = {
+			isa = PBXGroup;
+			children = (
+				339DE11929885E6300E1F5F5 /* Results+Extensions.swift */,
+			);
+			path = Results;
+			sourceTree = "<group>";
+		};
+		339DE11E29885EE500E1F5F5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				339DE11F29885EF900E1F5F5 /* ModelRepository */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		339DE11F29885EF900E1F5F5 /* ModelRepository */ = {
+			isa = PBXGroup;
+			children = (
+				339DE12029885F0C00E1F5F5 /* ModelRepository.swift */,
+			);
+			path = ModelRepository;
+			sourceTree = "<group>";
+		};
+		339DE12229885FD200E1F5F5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				339DE12329885FE300E1F5F5 /* WishRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		339E837F295A2A9A00DE9DF5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +409,7 @@
 			isa = PBXGroup;
 			children = (
 				339E8383295A2AEB00DE9DF5 /* Wish.swift */,
+				339DE113298856EF00E1F5F5 /* WishObject.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -617,15 +696,20 @@
 				339E837E295A29EB00DE9DF5 /* Configurable.swift in Sources */,
 				3354A3042958B236000A6136 /* Fonts+Generated.swift in Sources */,
 				3354A3002958B236000A6136 /* IB-Segues+Generated.swift in Sources */,
+				339DE12129885F0C00E1F5F5 /* ModelRepository.swift in Sources */,
 				3365A63D2958A8E300332EB9 /* WishApp.xcdatamodeld in Sources */,
+				339DE11A29885E6300E1F5F5 /* Results+Extensions.swift in Sources */,
 				3354A3012958B236000A6136 /* Strings+Generated.swift in Sources */,
+				339DE11829885DD900E1F5F5 /* StorageService.swift in Sources */,
 				339E8381295A2AAB00DE9DF5 /* WishListViewModel.swift in Sources */,
 				3365A6372958A8E300332EB9 /* WishListViewController.swift in Sources */,
 				3365A6332958A8E300332EB9 /* AppDelegate.swift in Sources */,
 				3354A3022958B236000A6136 /* XCAssets+Generated.swift in Sources */,
+				339DE114298856EF00E1F5F5 /* WishObject.swift in Sources */,
 				3365A6352958A8E300332EB9 /* SceneDelegate.swift in Sources */,
 				338DB13D2958CC7E00643365 /* BaseConstants.swift in Sources */,
 				3354A3112958BF3A000A6136 /* HeaderWishListView.swift in Sources */,
+				339DE12429885FE300E1F5F5 /* WishRepository.swift in Sources */,
 				3354A3232958C658000A6136 /* WishButtonView.swift in Sources */,
 				3354A3032958B236000A6136 /* IB-Scenes+Generated.swift in Sources */,
 				339E8384295A2AEB00DE9DF5 /* Wish.swift in Sources */,

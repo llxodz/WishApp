@@ -87,7 +87,7 @@ class WishListViewController: UIViewController {
 extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.getWishList().count ?? 0
+        return viewModel?.getData().count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -96,7 +96,7 @@ extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
             for: indexPath
         ) as? WishTableViewCell, let viewModel = viewModel else { return UITableViewCell() }
         
-        cell.configure(with: (viewModel.getWishList()[indexPath.row]))
+        cell.configure(with: (viewModel.getData()[indexPath.row]))
         
         return cell
     }
