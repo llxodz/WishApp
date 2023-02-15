@@ -25,7 +25,6 @@ final class WishTableViewCell: UITableViewCell {
     
     // Private property
     private var model: Wish?
-    private var heightDescription: CGFloat = 10
     
     // UI
     private lazy var titleWishLabel: UILabel = {

@@ -34,8 +34,6 @@
 		3365A6732958B08F00332EB9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3365A6752958B08F00332EB9 /* Localizable.strings */; };
 		338DB13D2958CC7E00643365 /* BaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB13C2958CC7E00643365 /* BaseConstants.swift */; };
 		338DB1422958D0D500643365 /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB1412958D0D500643365 /* WishTableViewCell.swift */; };
-		338DB1432958D0D500643365 /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB1412958D0D500643365 /* WishTableViewCell.swift */; };
-		338DB1442958D0D500643365 /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB1412958D0D500643365 /* WishTableViewCell.swift */; };
 		339DE114298856EF00E1F5F5 /* WishObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE113298856EF00E1F5F5 /* WishObject.swift */; };
 		339DE11829885DD900E1F5F5 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE11729885DD900E1F5F5 /* StorageService.swift */; };
 		339DE11A29885E6300E1F5F5 /* Results+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE11929885E6300E1F5F5 /* Results+Extensions.swift */; };
@@ -45,6 +43,7 @@
 		339E8381295A2AAB00DE9DF5 /* WishListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E8380295A2AAB00DE9DF5 /* WishListViewModel.swift */; };
 		339E8384295A2AEB00DE9DF5 /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339E8383295A2AEB00DE9DF5 /* Wish.swift */; };
 		49854330F3C7FF97DF72C59D /* Pods_WishApp_WishAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7DF3E14B7EC6F02AAAEF39 /* Pods_WishApp_WishAppUITests.framework */; };
+		7F8A8ABE29A3D42100D0D1B7 /* WishListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A8AAE29A3D30B00D0D1B7 /* WishListViewModelTest.swift */; };
 		8BD3BCC7110ADFCA068DD405 /* Pods_WishApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEA2CE70082FA08466661CC /* Pods_WishApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +105,7 @@
 		339E8383295A2AEB00DE9DF5 /* Wish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
 		40FDEC16AD6F99A188BA7A6B /* Pods-WishAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishAppTests.release.xcconfig"; path = "Target Support Files/Pods-WishAppTests/Pods-WishAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C40CE007FCBEEBA5EC1B53A /* Pods-WishAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WishAppTests/Pods-WishAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F8A8AAE29A3D30B00D0D1B7 /* WishListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewModelTest.swift; sourceTree = "<group>"; };
 		A0942C2AC4902A3C4164CAF8 /* Pods-WishApp-WishAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishApp-WishAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WishApp-WishAppUITests/Pods-WishApp-WishAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADF7EDDAE2CC0A3C9D695CC7 /* Pods-WishApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishApp.debug.xcconfig"; path = "Target Support Files/Pods-WishApp/Pods-WishApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C75C6C2D1366781EEC38373B /* Pods-WishApp-WishAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishApp-WishAppUITests.release.xcconfig"; path = "Target Support Files/Pods-WishApp-WishAppUITests/Pods-WishApp-WishAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -250,6 +250,7 @@
 		3365A64B2958A8E400332EB9 /* WishAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				7F8A8AAB29A3D2DA00D0D1B7 /* Screens */,
 				3365A64C2958A8E400332EB9 /* WishAppTests.swift */,
 			);
 			path = WishAppTests;
@@ -412,6 +413,30 @@
 				339DE113298856EF00E1F5F5 /* WishObject.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7F8A8AAB29A3D2DA00D0D1B7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				7F8A8AAC29A3D2E100D0D1B7 /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		7F8A8AAC29A3D2E100D0D1B7 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7F8A8AAD29A3D2E700D0D1B7 /* ViewModel */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7F8A8AAD29A3D2E700D0D1B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				7F8A8AAE29A3D30B00D0D1B7 /* WishListViewModelTest.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		CF9B971A2265294C8459CA48 /* Pods */ = {
@@ -722,8 +747,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338DB1432958D0D500643365 /* WishTableViewCell.swift in Sources */,
 				3365A64D2958A8E400332EB9 /* WishAppTests.swift in Sources */,
+				7F8A8ABE29A3D42100D0D1B7 /* WishListViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,7 +756,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338DB1442958D0D500643365 /* WishTableViewCell.swift in Sources */,
 				3365A6572958A8E400332EB9 /* WishAppUITests.swift in Sources */,
 				3365A6592958A8E400332EB9 /* WishAppUITestsLaunchTests.swift in Sources */,
 			);

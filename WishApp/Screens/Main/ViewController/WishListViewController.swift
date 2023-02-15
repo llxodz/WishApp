@@ -10,6 +10,7 @@ import SnapKit
 
 private enum Constants {
     static let headerHeight: CGFloat = 56
+    static let estimatedRowHeight: CGFloat = 32
 }
 
 class WishListViewController: UIViewController {
@@ -49,8 +50,8 @@ class WishListViewController: UIViewController {
             $0.height.equalTo(Constants.headerHeight)
         }
         wishListTableView.snp.makeConstraints {
-            $0.top.equalTo(headerView.snp.bottom).offset(8)
-            $0.leading.trailing.equalToSuperview().inset(16)
+            $0.top.equalTo(headerView.snp.bottom).offset(CGFloat.smallMargin)
+            $0.leading.trailing.equalToSuperview().inset(CGFloat.baseMargin)
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
         addWishButton.snp.makeConstraints {
@@ -75,15 +76,12 @@ class WishListViewController: UIViewController {
         wishListTableView.separatorStyle = .none
         wishListTableView.showsVerticalScrollIndicator = false
         wishListTableView.rowHeight = UITableView.automaticDimension
-        wishListTableView.estimatedRowHeight = 32
+        wishListTableView.estimatedRowHeight = Constants.estimatedRowHeight
     }
     
     @objc func addWishButtonTapped() {
         print(#function)
-        DispatchQueue.main.async { [weak self] in
-            self?.id += 1
-            self?.viewModel?.saveData(Wish(id: self!.id, title: "sd", description: "sddsd", link: nil, labels: nil))
-        }
+        self.viewModel?.saveData(Wish(id: self.id, title: "sd", description: "sddsd", link: nil, labels: nil))
         self.wishListTableView.reloadData()
     }
 }
@@ -93,16 +91,15 @@ class WishListViewController: UIViewController {
 extension WishListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.getData().count ?? 0
+        return viewModel?.getWishList().count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: WishTableViewCell.identifier,
-            for: indexPath
-        ) as? WishTableViewCell, let viewModel = viewModel else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: WishTableViewCell.identifier, for: indexPath) as? WishTableViewCell,
+              let viewModel = viewModel
+        else { return UITableViewCell() }
         
-        cell.configure(with: (viewModel.getData()[indexPath.row]))
+        cell.configure(with: (viewModel.getWishList()[indexPath.row]))
         
         return cell
     }
