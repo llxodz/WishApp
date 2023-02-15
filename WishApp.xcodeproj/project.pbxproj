@@ -268,7 +268,7 @@
 		3365A6652958AA9300332EB9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				3365A6682958AAA700332EB9 /* Main */,
+				3365A6682958AAA700332EB9 /* WishList */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		3365A6682958AAA700332EB9 /* Main */ = {
+		3365A6682958AAA700332EB9 /* WishList */ = {
 			isa = PBXGroup;
 			children = (
 				339DE12229885FD200E1F5F5 /* Repository */,
@@ -303,7 +303,7 @@
 				3354A30D2958BF11000A6136 /* ViewController */,
 				3354A30E2958BF1A000A6136 /* Views */,
 			);
-			path = Main;
+			path = WishList;
 			sourceTree = "<group>";
 		};
 		3365A66B2958AFC300332EB9 /* Fonts */ = {
@@ -418,17 +418,17 @@
 		7F8A8AAB29A3D2DA00D0D1B7 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				7F8A8AAC29A3D2E100D0D1B7 /* Main */,
+				7F8A8AAC29A3D2E100D0D1B7 /* WishList */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		7F8A8AAC29A3D2E100D0D1B7 /* Main */ = {
+		7F8A8AAC29A3D2E100D0D1B7 /* WishList */ = {
 			isa = PBXGroup;
 			children = (
 				7F8A8AAD29A3D2E700D0D1B7 /* ViewModel */,
 			);
-			path = Main;
+			path = WishList;
 			sourceTree = "<group>";
 		};
 		7F8A8AAD29A3D2E700D0D1B7 /* ViewModel */ = {
