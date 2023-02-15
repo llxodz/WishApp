@@ -12,8 +12,8 @@ final class StorageService {
     
     private let storage: Realm?
     
-    init(_ configuration: Realm.Configuration = Realm.Configuration(inMemoryIdentifier: "inMemory")) {
-        self.storage = try? Realm(configuration: configuration)
+    init() {
+        self.storage = try? Realm()
     }
     
     func saveOrUpdateObject(object: Object) throws {

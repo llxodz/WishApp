@@ -17,6 +17,7 @@ class WishListViewController: UIViewController {
     private lazy var headerView = HeaderWishListView()
     private lazy var wishListTableView = UITableView()
     private lazy var addWishButton = WishButtonView()
+    private var id: Int = -1
     
     var viewModel: WishListViewModel?
     
@@ -79,6 +80,11 @@ class WishListViewController: UIViewController {
     
     @objc func addWishButtonTapped() {
         print(#function)
+        DispatchQueue.main.async { [weak self] in
+            self?.id += 1
+            self?.viewModel?.saveData(Wish(id: self!.id, title: "sd", description: "sddsd", link: nil, labels: nil))
+        }
+        self.wishListTableView.reloadData()
     }
 }
 
