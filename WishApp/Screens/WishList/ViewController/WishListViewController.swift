@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import RealmSwift
 
 private enum Constants {
     static let headerHeight: CGFloat = 56
@@ -34,7 +35,7 @@ class WishListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = WishListViewModel()
+        viewModel = WishListViewModel(wishRepository: WishRepository(storage: BaseStorageService(storage: try? Realm())))
     }
     
     // MARK: - Private
@@ -80,9 +81,9 @@ class WishListViewController: UIViewController {
     }
     
     @objc func addWishButtonTapped() {
-        print(#function)
-        self.viewModel?.saveData(Wish(id: self.id, title: "sd", description: "sddsd", link: nil, labels: nil))
-        self.wishListTableView.reloadData()
+//        print(#function)
+//        self.viewModel?.saveData(Wish(id: self.id, title: "sd", description: "sddsd", link: nil, labels: nil))
+//        self.wishListTableView.reloadData()
     }
 }
 

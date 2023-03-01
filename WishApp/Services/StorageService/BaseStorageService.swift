@@ -8,12 +8,12 @@
 import Foundation
 import RealmSwift
 
-final class StorageService {
+final class BaseStorageService: StorageService {
     
     private let storage: Realm?
     
-    init() {
-        self.storage = try? Realm()
+    init(storage: Realm? = nil) {
+        self.storage = storage
     }
     
     func saveOrUpdateObject(object: Object) throws {
