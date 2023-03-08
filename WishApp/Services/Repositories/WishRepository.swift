@@ -13,7 +13,7 @@ final class WishRepository: ModelRepository {
     
     private let storage: StorageService
         
-    init(storage: StorageService = StorageService()) {
+    init(storage: StorageService) {
         self.storage = storage
     }
     
