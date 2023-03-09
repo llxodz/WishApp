@@ -36,7 +36,7 @@
 		338DB13D2958CC7E00643365 /* BaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB13C2958CC7E00643365 /* BaseConstants.swift */; };
 		338DB1422958D0D500643365 /* WishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338DB1412958D0D500643365 /* WishTableViewCell.swift */; };
 		339DE114298856EF00E1F5F5 /* WishObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE113298856EF00E1F5F5 /* WishObject.swift */; };
-		339DE11829885DD900E1F5F5 /* BaseStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE11729885DD900E1F5F5 /* BaseStorageService.swift */; };
+		339DE11829885DD900E1F5F5 /* RealmStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE11729885DD900E1F5F5 /* RealmStorageService.swift */; };
 		339DE11A29885E6300E1F5F5 /* Results+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE11929885E6300E1F5F5 /* Results+Extensions.swift */; };
 		339DE12129885F0C00E1F5F5 /* ModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE12029885F0C00E1F5F5 /* ModelRepository.swift */; };
 		339DE12429885FE300E1F5F5 /* WishRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339DE12329885FE300E1F5F5 /* WishRepository.swift */; };
@@ -100,7 +100,7 @@
 		338DB13C2958CC7E00643365 /* BaseConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseConstants.swift; sourceTree = "<group>"; };
 		338DB1412958D0D500643365 /* WishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishTableViewCell.swift; sourceTree = "<group>"; };
 		339DE113298856EF00E1F5F5 /* WishObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishObject.swift; sourceTree = "<group>"; };
-		339DE11729885DD900E1F5F5 /* BaseStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseStorageService.swift; sourceTree = "<group>"; };
+		339DE11729885DD900E1F5F5 /* RealmStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorageService.swift; sourceTree = "<group>"; };
 		339DE11929885E6300E1F5F5 /* Results+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+Extensions.swift"; sourceTree = "<group>"; };
 		339DE12029885F0C00E1F5F5 /* ModelRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelRepository.swift; sourceTree = "<group>"; };
 		339DE12329885FE300E1F5F5 /* WishRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishRepository.swift; sourceTree = "<group>"; };
@@ -343,17 +343,17 @@
 			isa = PBXGroup;
 			children = (
 				33D2275929A4140A0053148A /* Repositories */,
-				339DE11629885DCA00E1F5F5 /* StorageService */,
+				339DE11629885DCA00E1F5F5 /* RealmStorageService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
 		};
-		339DE11629885DCA00E1F5F5 /* StorageService */ = {
+		339DE11629885DCA00E1F5F5 /* RealmStorageService */ = {
 			isa = PBXGroup;
 			children = (
-				339DE11729885DD900E1F5F5 /* BaseStorageService.swift */,
+				339DE11729885DD900E1F5F5 /* RealmStorageService.swift */,
 			);
-			path = StorageService;
+			path = RealmStorageService;
 			sourceTree = "<group>";
 		};
 		339DE11B29885EB600E1F5F5 /* Extensions */ = {
@@ -742,7 +742,7 @@
 				3365A63D2958A8E300332EB9 /* WishApp.xcdatamodeld in Sources */,
 				339DE11A29885E6300E1F5F5 /* Results+Extensions.swift in Sources */,
 				3354A3012958B236000A6136 /* Strings+Generated.swift in Sources */,
-				339DE11829885DD900E1F5F5 /* BaseStorageService.swift in Sources */,
+				339DE11829885DD900E1F5F5 /* RealmStorageService.swift in Sources */,
 				339E8381295A2AAB00DE9DF5 /* WishListViewModel.swift in Sources */,
 				3365A6372958A8E300332EB9 /* WishListViewController.swift in Sources */,
 				3365A6332958A8E300332EB9 /* AppDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-final class BaseStorageService: StorageService {
+final class RealmStorageService: StorageService {
     
     private let storage: Realm?
     

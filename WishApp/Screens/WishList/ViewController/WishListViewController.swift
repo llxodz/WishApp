@@ -35,7 +35,7 @@ class WishListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = WishListViewModel(wishRepository: WishRepository(storage: BaseStorageService(storage: try? Realm())))
+        viewModel = WishListViewModel(wishRepository: WishRepository(storage: RealmStorageService(storage: try? Realm())))
     }
     
     // MARK: - Private
