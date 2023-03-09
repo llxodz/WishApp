@@ -72,6 +72,7 @@ final class WishDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.navigationBar.tintColor = .black
         navigationController?.isNavigationBarHidden = false
     }
     
@@ -115,10 +116,10 @@ final class WishDetailViewController: UIViewController {
             $0.top.equalTo(separatorTitleTextField.snp.bottom).offset(CGFloat.smallMargin)
             $0.leading.equalTo(descriptionImage.snp.trailing)
             $0.trailing.equalTo(view.snp.trailing).inset(CGFloat.smallMargin)
-            $0.height.equalTo(Constants.descriptionTextViewHeight)
+            $0.height.equalTo(40)
         }
         descriptionImage.snp.makeConstraints {
-            $0.top.equalTo(separatorTitleTextField.snp.bottom).offset(Constants.titleTextFieldHeight)
+            $0.top.equalTo(separatorTitleTextField.snp.bottom).offset(CGFloat.smallMargin)
             $0.leading.equalTo(view.snp.leading).inset(CGFloat.smallMargin)
             $0.trailing.equalTo(descriptionTextView.snp.leading)
             $0.height.width.equalTo(Constants.descriptionImageViewHeight)
@@ -139,6 +140,8 @@ final class WishDetailViewController: UIViewController {
     private func configureAppearance() {
         view.backgroundColor = .white
         titleTextField.delegate = self
+        descriptionTextView.delegate = self
+        descriptionTextView.isScrollEnabled = false
     }
 }
 
@@ -149,5 +152,22 @@ extension WishDetailViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         titleTextField.resignFirstResponder()
         return true
+    }
+}
+
+// MARK: - Extensions UITextViewDelegate
+
+extension WishDetailViewController: UITextViewDelegate {
+    
+    func textViewDidChange(_ textView: UITextView) {
+        let size = CGSize(width: view.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        
+        textView.constraints.forEach { constraint in
+            if constraint.firstAttribute == .height {
+                constraint.constant = estimatedSize.height
+                textView.updateConstraintsIfNeeded()
+            }
+        }
     }
 }
