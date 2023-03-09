@@ -1,5 +1,5 @@
 //
-//  WishRepository.swift
+//  ModelRepository.swift
 //  WishApp
 //
 //  Created by Ilya Gavrilov on 30.01.2023.

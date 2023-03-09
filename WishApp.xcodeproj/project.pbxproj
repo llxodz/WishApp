@@ -46,6 +46,9 @@
 		33D2275629A40C890053148A /* StorageServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2275529A40C890053148A /* StorageServiceMock.swift */; };
 		33D2275829A4128A0053148A /* WishRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2275729A4128A0053148A /* WishRepositoryMock.swift */; };
 		49854330F3C7FF97DF72C59D /* Pods_WishApp_WishAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD7DF3E14B7EC6F02AAAEF39 /* Pods_WishApp_WishAppUITests.framework */; };
+		7F5CA1DA29B9D7B500895F3A /* WishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5CA1D929B9D7B500895F3A /* WishDetailViewController.swift */; };
+		7F5CA1DE29B9D85100895F3A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5CA1DD29B9D85100895F3A /* Coordinator.swift */; };
+		7F5CA1E129B9D8BC00895F3A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5CA1E029B9D8BC00895F3A /* MainCoordinator.swift */; };
 		7F8A8ABE29A3D42100D0D1B7 /* WishListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F8A8AAE29A3D30B00D0D1B7 /* WishListViewModelTests.swift */; };
 		8BD3BCC7110ADFCA068DD405 /* Pods_WishApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDEA2CE70082FA08466661CC /* Pods_WishApp.framework */; };
 /* End PBXBuildFile section */
@@ -111,6 +114,9 @@
 		33D2275729A4128A0053148A /* WishRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishRepositoryMock.swift; sourceTree = "<group>"; };
 		40FDEC16AD6F99A188BA7A6B /* Pods-WishAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishAppTests.release.xcconfig"; path = "Target Support Files/Pods-WishAppTests/Pods-WishAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5C40CE007FCBEEBA5EC1B53A /* Pods-WishAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WishAppTests/Pods-WishAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F5CA1D929B9D7B500895F3A /* WishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishDetailViewController.swift; sourceTree = "<group>"; };
+		7F5CA1DD29B9D85100895F3A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		7F5CA1E029B9D8BC00895F3A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		7F8A8AAE29A3D30B00D0D1B7 /* WishListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewModelTests.swift; sourceTree = "<group>"; };
 		A0942C2AC4902A3C4164CAF8 /* Pods-WishApp-WishAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishApp-WishAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-WishApp-WishAppUITests/Pods-WishApp-WishAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ADF7EDDAE2CC0A3C9D695CC7 /* Pods-WishApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WishApp.debug.xcconfig"; path = "Target Support Files/Pods-WishApp/Pods-WishApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +281,7 @@
 		3365A6652958AA9300332EB9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				7F5CA1D629B9D78800895F3A /* WishDetail */,
 				3365A6682958AAA700332EB9 /* WishList */,
 			);
 			path = Screens;
@@ -298,6 +305,7 @@
 				339DE11E29885EE500E1F5F5 /* Protocols */,
 				338DB13C2958CC7E00643365 /* BaseConstants.swift */,
 				339E837D295A29EB00DE9DF5 /* Configurable.swift */,
+				7F5CA1E029B9D8BC00895F3A /* MainCoordinator.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -384,8 +392,9 @@
 		339DE11E29885EE500E1F5F5 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				7F5CA1DC29B9D83F00895F3A /* Coordinator */,
+				7F5CA1DB29B9D83300895F3A /* StorageService */,
 				339DE11F29885EF900E1F5F5 /* ModelRepository */,
-				3329429229A4078B00A9CA75 /* StorageService.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -430,6 +439,46 @@
 				339DE12329885FE300E1F5F5 /* WishRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		7F5CA1D629B9D78800895F3A /* WishDetail */ = {
+			isa = PBXGroup;
+			children = (
+				7F5CA1D829B9D7A100895F3A /* ViewModel */,
+				7F5CA1D729B9D79B00895F3A /* ViewController */,
+			);
+			path = WishDetail;
+			sourceTree = "<group>";
+		};
+		7F5CA1D729B9D79B00895F3A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7F5CA1D929B9D7B500895F3A /* WishDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7F5CA1D829B9D7A100895F3A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7F5CA1DB29B9D83300895F3A /* StorageService */ = {
+			isa = PBXGroup;
+			children = (
+				3329429229A4078B00A9CA75 /* StorageService.swift */,
+			);
+			path = StorageService;
+			sourceTree = "<group>";
+		};
+		7F5CA1DC29B9D83F00895F3A /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				7F5CA1DD29B9D85100895F3A /* Coordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		7F8A8AAB29A3D2DA00D0D1B7 /* Screens */ = {
@@ -757,6 +806,9 @@
 				3354A3032958B236000A6136 /* IB-Scenes+Generated.swift in Sources */,
 				339E8384295A2AEB00DE9DF5 /* Wish.swift in Sources */,
 				338DB1422958D0D500643365 /* WishTableViewCell.swift in Sources */,
+				7F5CA1DE29B9D85100895F3A /* Coordinator.swift in Sources */,
+				7F5CA1E129B9D8BC00895F3A /* MainCoordinator.swift in Sources */,
+				7F5CA1DA29B9D7B500895F3A /* WishDetailViewController.swift in Sources */,
 				3354A3142958BFF5000A6136 /* UIView+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

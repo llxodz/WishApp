@@ -14,4 +14,10 @@ extension UIView {
             addSubview($0)
         }
     }
+    
+    func baseSeparatorLine() -> UIView {
+        let view = UIView()
+        view.backgroundColor = .gray
+        return view
+    }
 }

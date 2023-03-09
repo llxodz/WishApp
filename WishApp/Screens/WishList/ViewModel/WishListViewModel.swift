@@ -9,6 +9,7 @@ import UIKit
 
 protocol WishListViewModelProtocol {
     func getWishList() -> [Wish]
+    func addWish(_ wish: Wish)
 }
 
 final class WishListViewModel: WishListViewModelProtocol {

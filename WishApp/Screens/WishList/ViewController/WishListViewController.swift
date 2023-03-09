@@ -22,6 +22,7 @@ class WishListViewController: UIViewController {
     private var id: Int = -1
     
     var viewModel: WishListViewModel?
+    var coordinator: MainCoordinator?
     
     // MARK: - Lifecycle
     
@@ -36,6 +37,11 @@ class WishListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = WishListViewModel(wishRepository: WishRepository(storage: RealmStorageService(storage: try? Realm())))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     // MARK: - Private
@@ -81,9 +87,11 @@ class WishListViewController: UIViewController {
     }
     
     @objc func addWishButtonTapped() {
-//        print(#function)
+        print(#function)
 //        self.viewModel?.saveData(Wish(id: self.id, title: "sd", description: "sddsd", link: nil, labels: nil))
 //        self.wishListTableView.reloadData()
+        
+        coordinator?.goToWishDetailScreen()
     }
 }
 

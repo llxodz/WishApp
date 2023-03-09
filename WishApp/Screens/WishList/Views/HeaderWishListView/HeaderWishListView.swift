@@ -16,11 +16,7 @@ private enum Constants {
 final class HeaderWishListView: UIView {
     
     private lazy var titleLabel = UILabel()
-    private lazy var separatorLine: UIView = {
-        let view = UIView()
-        view.backgroundColor = .gray
-        return view
-    }()
+    private lazy var separatorLine = UIView().baseSeparatorLine()
     
     // MARK: - Init
     

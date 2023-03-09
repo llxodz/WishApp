@@ -1,5 +1,5 @@
 //
-//  BaseStorageService.swift
+//  StorageService.swift
 //  WishApp
 //
 //  Created by Ilya Gavrilov on 20.02.2023.
